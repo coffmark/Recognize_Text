@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>655471283297-qkbth1e2ttgabkabb8fmrhor28mcn89d.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.655471283297-qkbth1e2ttgabkabb8fmrhor28mcn89d</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA9hBsPTena_2X7c8TsSNqm9JTZOHWY7ps</string>
+	<key>GCM_SENDER_ID</key>
+	<string>655471283297</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.kamimura.Recognize-Text</string>
+	<key>PROJECT_ID</key>
+	<string>recognize-text-8e878</string>
+	<key>STORAGE_BUCKET</key>
+	<string>recognize-text-8e878.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:655471283297:ios:3fc47d8f668cc16c29ee20</string>
+	<key>DATABASE_URL</key>
+	<string>https://recognize-text-8e878.firebaseio.com</string>
+</dict>
+</plist>

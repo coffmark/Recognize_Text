@@ -3,19 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43F1C30496BECBCA0BDE2197 /* Pods_Recognize_Text.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBE5DA460D94027ACAD1AED /* Pods_Recognize_Text.framework */; };
 		920C06E724FDFBF300372EFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C06E624FDFBF300372EFF /* AppDelegate.swift */; };
 		920C06E924FDFBF300372EFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C06E824FDFBF300372EFF /* SceneDelegate.swift */; };
 		920C06EB24FDFBF300372EFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C06EA24FDFBF300372EFF /* ContentView.swift */; };
 		920C06ED24FDFBF600372EFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920C06EC24FDFBF600372EFF /* Assets.xcassets */; };
 		920C06F024FDFBF600372EFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920C06EF24FDFBF600372EFF /* Preview Assets.xcassets */; };
 		920C06F324FDFBF600372EFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920C06F124FDFBF600372EFF /* LaunchScreen.storyboard */; };
+		920C06FB24FDFCDC00372EFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 920C06FA24FDFCDC00372EFF /* GoogleService-Info.plist */; };
+		92B0345124FF5403004F44F8 /* ScanDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B0345024FF5403004F44F8 /* ScanDocumentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		234293FB49630D83BF279326 /* Pods-Recognize_Text.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recognize_Text.release.xcconfig"; path = "Target Support Files/Pods-Recognize_Text/Pods-Recognize_Text.release.xcconfig"; sourceTree = "<group>"; };
+		6EBE5DA460D94027ACAD1AED /* Pods_Recognize_Text.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recognize_Text.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		920C06E324FDFBF300372EFF /* Recognize_Text.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recognize_Text.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		920C06E624FDFBF300372EFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		920C06E824FDFBF300372EFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		920C06EF24FDFBF600372EFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		920C06F224FDFBF600372EFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		920C06F424FDFBF600372EFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		920C06FA24FDFCDC00372EFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		92B0345024FF5403004F44F8 /* ScanDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDocumentView.swift; sourceTree = "<group>"; };
+		D61461FB16DFC15C62261F83 /* Pods-Recognize_Text.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recognize_Text.debug.xcconfig"; path = "Target Support Files/Pods-Recognize_Text/Pods-Recognize_Text.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F1C30496BECBCA0BDE2197 /* Pods_Recognize_Text.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D3890D4B87D214DCFED8E57 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D61461FB16DFC15C62261F83 /* Pods-Recognize_Text.debug.xcconfig */,
+				234293FB49630D83BF279326 /* Pods-Recognize_Text.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		81CBC314E08E66836E162209 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EBE5DA460D94027ACAD1AED /* Pods_Recognize_Text.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		920C06DA24FDFBF300372EFF = {
 			isa = PBXGroup;
 			children = (
 				920C06E524FDFBF300372EFF /* Recognize_Text */,
 				920C06E424FDFBF300372EFF /* Products */,
+				5D3890D4B87D214DCFED8E57 /* Pods */,
+				81CBC314E08E66836E162209 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,8 +87,10 @@
 				920C06E624FDFBF300372EFF /* AppDelegate.swift */,
 				920C06E824FDFBF300372EFF /* SceneDelegate.swift */,
 				920C06EA24FDFBF300372EFF /* ContentView.swift */,
+				92B0345024FF5403004F44F8 /* ScanDocumentView.swift */,
 				920C06EC24FDFBF600372EFF /* Assets.xcassets */,
 				920C06F124FDFBF600372EFF /* LaunchScreen.storyboard */,
+				920C06FA24FDFCDC00372EFF /* GoogleService-Info.plist */,
 				920C06F424FDFBF600372EFF /* Info.plist */,
 				920C06EE24FDFBF600372EFF /* Preview Content */,
 			);
@@ -82,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 920C06F724FDFBF600372EFF /* Build configuration list for PBXNativeTarget "Recognize_Text" */;
 			buildPhases = (
+				4952FA35081DDA51076C1A09 /* [CP] Check Pods Manifest.lock */,
 				920C06DF24FDFBF300372EFF /* Sources */,
 				920C06E024FDFBF300372EFF /* Frameworks */,
 				920C06E124FDFBF300372EFF /* Resources */,
+				2BD2F494273272C3FB639F6B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,12 +166,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				920C06F324FDFBF600372EFF /* LaunchScreen.storyboard in Resources */,
+				920C06FB24FDFCDC00372EFF /* GoogleService-Info.plist in Resources */,
 				920C06F024FDFBF600372EFF /* Preview Assets.xcassets in Resources */,
 				920C06ED24FDFBF600372EFF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BD2F494273272C3FB639F6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Recognize_Text/Pods-Recognize_Text-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Recognize_Text/Pods-Recognize_Text-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Recognize_Text/Pods-Recognize_Text-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4952FA35081DDA51076C1A09 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Recognize_Text-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		920C06DF24FDFBF300372EFF /* Sources */ = {
@@ -148,6 +223,7 @@
 			files = (
 				920C06E724FDFBF300372EFF /* AppDelegate.swift in Sources */,
 				920C06E924FDFBF300372EFF /* SceneDelegate.swift in Sources */,
+				92B0345124FF5403004F44F8 /* ScanDocumentView.swift in Sources */,
 				920C06EB24FDFBF300372EFF /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +358,7 @@
 		};
 		920C06F824FDFBF600372EFF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D61461FB16DFC15C62261F83 /* Pods-Recognize_Text.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +379,7 @@
 		};
 		920C06F924FDFBF600372EFF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 234293FB49630D83BF279326 /* Pods-Recognize_Text.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
