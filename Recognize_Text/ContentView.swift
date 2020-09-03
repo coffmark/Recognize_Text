@@ -49,11 +49,11 @@ struct ContentView: View {
             .navigationBarTitle("Text Recognition")
                 
                 
-            .sheet(isPresented: $isShowingCaptureView) {
+           //.sheet(isPresented: $isShowingCaptureView) {
                 
                 
-                ScanDocumentView(recognizedText: self.$recognizedText)
-            }
+                //ScanDocumentView(recognizedText: self.$recognizedText)
+            //}
         }
     }
 }

@@ -16,6 +16,8 @@
 		920C06F324FDFBF600372EFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920C06F124FDFBF600372EFF /* LaunchScreen.storyboard */; };
 		920C06FB24FDFCDC00372EFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 920C06FA24FDFCDC00372EFF /* GoogleService-Info.plist */; };
 		92B0345124FF5403004F44F8 /* ScanDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B0345024FF5403004F44F8 /* ScanDocumentView.swift */; };
+		92B0345324FF5BED004F44F8 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B0345224FF5BED004F44F8 /* CameraView.swift */; };
+		92B0345624FF5C7C004F44F8 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B0345524FF5C7C004F44F8 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		920C06F424FDFBF600372EFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		920C06FA24FDFCDC00372EFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		92B0345024FF5403004F44F8 /* ScanDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDocumentView.swift; sourceTree = "<group>"; };
+		92B0345224FF5BED004F44F8 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		92B0345524FF5C7C004F44F8 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		D61461FB16DFC15C62261F83 /* Pods-Recognize_Text.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recognize_Text.debug.xcconfig"; path = "Target Support Files/Pods-Recognize_Text/Pods-Recognize_Text.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +88,7 @@
 		920C06E524FDFBF300372EFF /* Recognize_Text */ = {
 			isa = PBXGroup;
 			children = (
+				92B0345424FF5C3E004F44F8 /* Camera */,
 				920C06E624FDFBF300372EFF /* AppDelegate.swift */,
 				920C06E824FDFBF300372EFF /* SceneDelegate.swift */,
 				920C06EA24FDFBF300372EFF /* ContentView.swift */,
@@ -103,6 +108,15 @@
 				920C06EF24FDFBF600372EFF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		92B0345424FF5C3E004F44F8 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				92B0345224FF5BED004F44F8 /* CameraView.swift */,
+				92B0345524FF5C7C004F44F8 /* CameraViewController.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,7 +238,9 @@
 				920C06E724FDFBF300372EFF /* AppDelegate.swift in Sources */,
 				920C06E924FDFBF300372EFF /* SceneDelegate.swift in Sources */,
 				92B0345124FF5403004F44F8 /* ScanDocumentView.swift in Sources */,
+				92B0345324FF5BED004F44F8 /* CameraView.swift in Sources */,
 				920C06EB24FDFBF300372EFF /* ContentView.swift in Sources */,
+				92B0345624FF5C7C004F44F8 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
