@@ -12,18 +12,17 @@ import Firebase
 struct ContentView: View {
     
     @State private var isfinished : Bool = false
-    @State private var recognizedText : String = "Now Loading"
+    @State private var recognizedText : String = ""
+    
     
     var body: some View {
-        
         VStack{
+            
             Image("swift")
                 .resizable()
                 .scaledToFit()
             
-            
             Button(action: {
-                
                 print(RecognizedTextStruct(recognizedText: self.$recognizedText, isfinished: self.$isfinished).recognizedTextFunc())
                 
             }, label: {
@@ -33,27 +32,25 @@ struct ContentView: View {
                     .padding(10)
                     .cornerRadius(20)
                     .background(Color(.gray))
-                
             })
             
             Spacer(minLength: 0)
             
-            
+            //文字の取得が完了したら、表示する
             if isfinished{
                 //RecognizedView()
                 Text("\(self.recognizedText)")
                     .font(.body)
                     .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
                     .fontWeight(.heavy)
-                
             }else{
                 Text("🤔")
                     .font(.largeTitle)
             }
-            
         }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
@@ -67,10 +64,10 @@ struct RecognizedTextStruct {
     @Binding var recognizedText : String
     @Binding var isfinished : Bool
     
+     
     func recognizedTextFunc() -> String{
-        
+        //取得したテキストを一時的に入れる
         var getTexts: [String] = []
-        
         
         let vision = Vision.vision()
         
@@ -115,14 +112,10 @@ struct RecognizedTextStruct {
                     }
                 }
             }
-            
             self.recognizedText = getTexts.joined(separator: "")
             print("debug \(self.recognizedText)")
-            
         }
         self.isfinished.toggle()
-        print("text -> \(self.recognizedText)")
-        sleep(10)
         print("text -> \(self.recognizedText)")
         return self.recognizedText
         
