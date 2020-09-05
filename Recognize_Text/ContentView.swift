@@ -14,33 +14,42 @@ struct ContentView: View {
     @State private var isfinished : Bool = false
     @State private var recognizedText : String = "Now Loading"
     
-    
-    
-    
     var body: some View {
         
         VStack{
             Image("swift")
                 .resizable()
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/2)
-
+                .scaledToFit()
+            
             
             Button(action: {
                 
                 print(RecognizedTextStruct(recognizedText: self.$recognizedText, isfinished: self.$isfinished).recognizedTextFunc())
                 
             }, label: {
-                Text("Start Recognized Text")
+                Text("認識を開始")
+                    .font(.headline)
+                    .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
+                    .padding(10)
+                    .cornerRadius(20)
+                    .background(Color(.gray))
+                
             })
-            Spacer()
+            
+            Spacer(minLength: 0)
+            
             
             if isfinished{
                 //RecognizedView()
                 Text("\(self.recognizedText)")
+                    .font(.body)
+                    .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
+                    .fontWeight(.heavy)
                 
+            }else{
+                Text("🤔")
+                    .font(.largeTitle)
             }
-            
-            
             
         }
     }
@@ -116,7 +125,7 @@ struct RecognizedTextStruct {
         sleep(10)
         print("text -> \(self.recognizedText)")
         return self.recognizedText
-
+        
         
     }
 }
