@@ -14,6 +14,7 @@ struct ContentView: View {
 
     @State private var isShowing : Bool = false
     
+    private var hogehoge: String = "hogehoge"
     
     
     var body: some View {
@@ -26,6 +27,7 @@ struct ContentView: View {
             
             Button(action: {
                 self.isShowing = true
+                print("\(self.hogehoge)")
             }, label: {
                 Text("Start Recognized Text")
             })
@@ -34,6 +36,8 @@ struct ContentView: View {
             if isShowing{
                 RecognizedView()
             }
+            
+            
             
         }
     }
