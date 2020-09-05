@@ -6,16 +6,16 @@
 //  Copyright © 2020 神村亮佑. All rights reserved.
 //
 
-import Foundation
-
-
-class RecognizedTextViewModel {
-    
-    
-    var returnText : String = ""
-    
-    func PrintTextFunc() -> String {
-        self.returnText = "RyosukeKamimura"
-        return returnText
-    }
-}
+//import Foundation
+//
+//
+//class RecognizedTextViewModel {
+//    
+//    
+//    var returnText : String = ""
+//    
+//    func PrintTextFunc() -> String {
+//        self.returnText = "RyosukeKamimura"
+//        return returnText
+//    }
+//}
