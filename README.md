@@ -1,16 +1,16 @@
 # Recognized-Text by FirebaseML
 
-
-### GIF
-
-
 <img src="https://user-images.githubusercontent.com/52638834/92302892-f4471780-efaa-11ea-944e-9c77e3c54908.gif" alt="drawing" width="600"/>
 
 
 
+FirebaseMLには、デバイス版とクラウド版があります。
+今回はクラウド版でテキスト認識を行っってみました。
+ぜひ、参考にしていただけると幸いです！
 
 
-### Usage → 手順は以下の5つです！！
+
+### 手順(5つ)
 
 
 #### ①Firebaseと連携
