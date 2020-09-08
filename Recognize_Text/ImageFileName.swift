@@ -9,10 +9,10 @@
 import Foundation
 
 
-class ImageFileName {
+struct ImageFileName {
     
-    var imageName: String = "swift"
-
+    let imageName: String = "swift"
+    
 }
 
 
