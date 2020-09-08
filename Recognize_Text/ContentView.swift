@@ -14,16 +14,21 @@ struct ContentView: View {
     @State private var isfinished : Bool = false
     @State private var recognizedText : String = ""
     
+    //画像の参照元を呼び出し
+    let imageFileName = ImageFileName()
+
     
     var body: some View {
         VStack{
             
-            Image("swift")
+            Image(imageFileName.imageName)
                 .resizable()
                 .scaledToFit()
             
             Button(action: {
-                print(RecognizedTextStruct(recognizedText: self.$recognizedText, isfinished: self.$isfinished).recognizedTextFunc())
+                
+                print(RecognizedText(recognizedText: self.$recognizedText, isfinished: self.$isfinished).recognizedTextFunc())
+                
                 
             }, label: {
                 Text("認識を開始")
@@ -59,15 +64,18 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
-struct RecognizedTextStruct {
+
+struct RecognizedText {
     
     @Binding var recognizedText : String
     @Binding var isfinished : Bool
     
+    let imageFileName = ImageFileName()
      
     func recognizedTextFunc() -> String{
         //取得したテキストを一時的に入れる
         var getTexts: [String] = []
+        
         
         let vision = Vision.vision()
         
@@ -75,7 +83,7 @@ struct RecognizedTextStruct {
         options.languageHints = ["en", "ja"]
         let textRecognizer = vision.cloudTextRecognizer(options: options)
         
-        let visionImage = VisionImage(image: UIImage(named: "swift")!)
+        let visionImage = VisionImage(image: UIImage(named: imageFileName.imageName)!)
         
         textRecognizer.process(visionImage) { result, error in
             guard error == nil, let result = result else {
@@ -106,9 +114,7 @@ struct RecognizedTextStruct {
                         //self.recognizedText.wrappedValue = elementText
                         //self.text = elementText
                         print("debug \(elementText)")
-                        
                         getTexts.append(elementText)
-                        
                     }
                 }
             }
@@ -117,8 +123,9 @@ struct RecognizedTextStruct {
         }
         self.isfinished.toggle()
         print("text -> \(self.recognizedText)")
+        
         return self.recognizedText
-        
-        
+          
     }
 }
+
