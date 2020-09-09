@@ -8,6 +8,8 @@
 
 import Foundation
 
+// ImageAssetsの指定を行う
+
 
 struct ImageFileName {
     

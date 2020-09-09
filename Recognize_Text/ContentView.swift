@@ -11,19 +11,47 @@ import Firebase
 
 struct ContentView: View {
     
+    
+    @State private var image: Image?
     @State private var isfinished : Bool = false
     @State private var recognizedText : String = ""
     
+    @State private var showingImagePicker: Bool = false
+    @State private var inputImage: UIImage?
+    
+    
+    @State private var isShowImage: Bool = false
     //画像の参照元を呼び出し
     let imageFileName = ImageFileName()
 
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        image = Image(uiImage: inputImage)
+    }
+    
     
     var body: some View {
         VStack{
             
-            Image(imageFileName.imageName)
-                .resizable()
-                .scaledToFit()
+            VStack{
+                ZStack{
+                    Rectangle().fill(Color.secondary)
+                    
+                    if image != nil {
+                        image?
+                            .resizable()
+                            .scaledToFit()
+                    }else{
+                        Text("Loading Now")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                        
+                    }
+                }
+                .onTapGesture {
+                    self.showingImagePicker = true
+                }
+            }
             
             Button(action: {
                 
@@ -52,7 +80,13 @@ struct ContentView: View {
                 Text("🤔")
                     .font(.largeTitle)
             }
+            
+        }.sheet(isPresented: $showingImagePicker, onDismiss: loadImage){
+            ImagePicker(image: self.$inputImage)
+            
         }
+        
+        
     }
 }
 
@@ -60,72 +94,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-
-
-
-struct RecognizedText {
-    
-    @Binding var recognizedText : String
-    @Binding var isfinished : Bool
-    
-    let imageFileName = ImageFileName()
-     
-    func recognizedTextFunc() -> String{
-        //取得したテキストを一時的に入れる
-        var getTexts: [String] = []
-        
-        
-        let vision = Vision.vision()
-        
-        let options = VisionCloudTextRecognizerOptions()
-        options.languageHints = ["en", "ja"]
-        let textRecognizer = vision.cloudTextRecognizer(options: options)
-        
-        let visionImage = VisionImage(image: UIImage(named: imageFileName.imageName)!)
-        
-        textRecognizer.process(visionImage) { result, error in
-            guard error == nil, let result = result else {
-                // ...
-                return
-            }
-            
-            //let resultText = result.text
-            for block in result.blocks {
-                //let blockText = block.text
-                //let blockConfidence = block.confidence
-                //let blockLanguages = block.recognizedLanguages
-                //let blockCornerPoints = block.cornerPoints
-                //let blockFrame = block.frame
-                for line in block.lines {
-                    //let lineText = line.text
-                    //let lineConfidence = line.confidence
-                    //let lineLanguages = line.recognizedLanguages
-                    //let lineCornerPoints = line.cornerPoints
-                    //let lineFrame = line.frame
-                    for element in line.elements {
-                        let elementText = element.text
-                        //let elementConfidence = element.confidence
-                        //let elementLanguages = element.recognizedLanguages
-                        //let elementCornerPoints = element.cornerPoints
-                        //let elementFrame = element.frame
-                        
-                        //self.recognizedText.wrappedValue = elementText
-                        //self.text = elementText
-                        print("debug \(elementText)")
-                        getTexts.append(elementText)
-                    }
-                }
-            }
-            self.recognizedText = getTexts.joined(separator: "")
-            print("debug \(self.recognizedText)")
-        }
-        self.isfinished.toggle()
-        print("text -> \(self.recognizedText)")
-        
-        return self.recognizedText
-          
     }
 }
 

@@ -15,6 +15,9 @@
 		920C06F324FDFBF600372EFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920C06F124FDFBF600372EFF /* LaunchScreen.storyboard */; };
 		920C06FB24FDFCDC00372EFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 920C06FA24FDFCDC00372EFF /* GoogleService-Info.plist */; };
 		92335CB82500962700ADAA5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92335CB72500962700ADAA5D /* ContentView.swift */; };
+		92BC223625070406001B34F7 /* ImageFileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC223525070406001B34F7 /* ImageFileName.swift */; };
+		92BC22382508A312001B34F7 /* RecognizedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC22372508A312001B34F7 /* RecognizedText.swift */; };
+		92BC223A2508A49B001B34F7 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC22392508A49B001B34F7 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		920C06F424FDFBF600372EFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		920C06FA24FDFCDC00372EFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		92335CB72500962700ADAA5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		92BC223525070406001B34F7 /* ImageFileName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileName.swift; sourceTree = "<group>"; };
+		92BC22372508A312001B34F7 /* RecognizedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizedText.swift; sourceTree = "<group>"; };
+		92BC22392508A49B001B34F7 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		D61461FB16DFC15C62261F83 /* Pods-Recognize_Text.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recognize_Text.debug.xcconfig"; path = "Target Support Files/Pods-Recognize_Text/Pods-Recognize_Text.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +91,9 @@
 				920C06E624FDFBF300372EFF /* AppDelegate.swift */,
 				920C06E824FDFBF300372EFF /* SceneDelegate.swift */,
 				92335CB72500962700ADAA5D /* ContentView.swift */,
+				92BC22392508A49B001B34F7 /* ImagePicker.swift */,
+				92BC223525070406001B34F7 /* ImageFileName.swift */,
+				92BC22372508A312001B34F7 /* RecognizedText.swift */,
 				920C06EC24FDFBF600372EFF /* Assets.xcassets */,
 				920C06F124FDFBF600372EFF /* LaunchScreen.storyboard */,
 				920C06FA24FDFCDC00372EFF /* GoogleService-Info.plist */,
@@ -220,6 +229,9 @@
 			files = (
 				920C06E724FDFBF300372EFF /* AppDelegate.swift in Sources */,
 				920C06E924FDFBF300372EFF /* SceneDelegate.swift in Sources */,
+				92BC223625070406001B34F7 /* ImageFileName.swift in Sources */,
+				92BC223A2508A49B001B34F7 /* ImagePicker.swift in Sources */,
+				92BC22382508A312001B34F7 /* RecognizedText.swift in Sources */,
 				92335CB82500962700ADAA5D /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
