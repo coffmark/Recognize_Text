@@ -16,6 +16,9 @@ struct RecognizedText {
     @Binding var recognizedText : String
     @Binding var isfinished : Bool
     
+    @Binding var inputImage: UIImage?
+
+    
     let imageFileName = ImageFileName()
      
     func recognizedTextFunc() -> String{
@@ -29,7 +32,7 @@ struct RecognizedText {
         options.languageHints = ["en", "ja"]
         let textRecognizer = vision.cloudTextRecognizer(options: options)
         
-        let visionImage = VisionImage(image: UIImage(named: imageFileName.imageName)!)
+        let visionImage = VisionImage(image: (inputImage!))
         
         textRecognizer.process(visionImage) { result, error in
             guard error == nil, let result = result else {

@@ -55,7 +55,7 @@ struct ContentView: View {
             
             Button(action: {
                 
-                print(RecognizedText(recognizedText: self.$recognizedText, isfinished: self.$isfinished).recognizedTextFunc())
+                print(RecognizedText(recognizedText: self.$recognizedText, isfinished: self.$isfinished, inputImage: self.$inputImage).recognizedTextFunc())
                 
                 
             }, label: {
