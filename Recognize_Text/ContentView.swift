@@ -13,12 +13,16 @@ struct ContentView: View {
     
     
     @State private var image: Image?
+    //終わったか返す変数
     @State private var isfinished : Bool = false
+    //認識するテキスト
     @State private var recognizedText : String = ""
     
     @State private var showingImagePicker: Bool = false
     @State private var inputImage: UIImage?
     
+    //Copy Button の色を変える変数
+    @State private var isCopyText: Bool = false
     
     @State private var isShowImage: Bool = false
     //画像の参照元を呼び出し
@@ -54,10 +58,12 @@ struct ContentView: View {
             }
             
             HStack {
+                Spacer(minLength: 0)
+                
                 Button(action: {
                     
                     print(RecognizedText(recognizedText: self.$recognizedText, isfinished: self.$isfinished, inputImage: self.$inputImage).recognizedTextFunc())
-                    
+                    self.isCopyText = true
                     
                 }, label: {
                     Text("認識を開始")
@@ -65,23 +71,27 @@ struct ContentView: View {
                         .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
                         .padding(10)
                         .cornerRadius(20)
-                        .background(Color(.gray))
+                        .background(Color(#colorLiteral(red: 1, green: 0.7983970642, blue: 0.007040084805, alpha: 1)))
                 })
                 Spacer(minLength: 0)
                 Button(action: {
                     if self.isfinished{
+                        print("\(self.$recognizedText)")
                         UIPasteboard.general.string = "\(self.$recognizedText)"
                     }else{
-                        UIPasteboard.general.string = "No Text"
+                        self.isCopyText = false
+                        UIPasteboard.general.string = ""
                     }
                     
                 }, label: {
-                    Text("Copy")
-                        .foregroundColor(.black)
-                        .background(Color(.white))
-                        .padding(20)
+                    Text("コピー")
+                        .font(.headline)
+                        .foregroundColor(self.isCopyText ?  Color(#colorLiteral(red: 0.1247209385, green: 0.29296875, blue: 0.6007090807, alpha: 1)) : Color(#colorLiteral(red: 0.5254421234, green: 0.5255209804, blue: 0.5254250169, alpha: 1)))
+                        .padding(10)
                         .cornerRadius(20)
+                        .background(self.isCopyText ?  Color(#colorLiteral(red: 1, green: 0.7983970642, blue: 0.007040084805, alpha: 1)) : Color(#colorLiteral(red: 0.6666070223, green: 0.6667050123, blue: 0.6665856242, alpha: 1)))
                 })
+                Spacer(minLength: 0)
             }
             
             Spacer(minLength: 0)
