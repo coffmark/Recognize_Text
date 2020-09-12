@@ -23,7 +23,7 @@ struct ContentView: View {
     @State private var isShowImage: Bool = false
     //画像の参照元を呼び出し
     let imageFileName = ImageFileName()
-
+    
     func loadImage() {
         guard let inputImage = inputImage else { return }
         image = Image(uiImage: inputImage)
@@ -53,19 +53,36 @@ struct ContentView: View {
                 }
             }
             
-            Button(action: {
-                
-                print(RecognizedText(recognizedText: self.$recognizedText, isfinished: self.$isfinished, inputImage: self.$inputImage).recognizedTextFunc())
-                
-                
-            }, label: {
-                Text("認識を開始")
-                    .font(.headline)
-                    .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
-                    .padding(10)
-                    .cornerRadius(20)
-                    .background(Color(.gray))
-            })
+            HStack {
+                Button(action: {
+                    
+                    print(RecognizedText(recognizedText: self.$recognizedText, isfinished: self.$isfinished, inputImage: self.$inputImage).recognizedTextFunc())
+                    
+                    
+                }, label: {
+                    Text("認識を開始")
+                        .font(.headline)
+                        .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
+                        .padding(10)
+                        .cornerRadius(20)
+                        .background(Color(.gray))
+                })
+                Spacer(minLength: 0)
+                Button(action: {
+                    if self.isfinished{
+                        UIPasteboard.general.string = "\(self.$recognizedText)"
+                    }else{
+                        UIPasteboard.general.string = "No Text"
+                    }
+                    
+                }, label: {
+                    Text("Copy")
+                        .foregroundColor(.black)
+                        .background(Color(.white))
+                        .padding(20)
+                        .cornerRadius(20)
+                })
+            }
             
             Spacer(minLength: 0)
             
