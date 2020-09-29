@@ -8,6 +8,8 @@
 
 import SwiftUI
 import Firebase
+import Foundation
+
 
 struct ContentView: View {
     
@@ -25,8 +27,6 @@ struct ContentView: View {
     @State private var isCopyText: Bool = false
     
     @State private var isShowImage: Bool = false
-    //画像の参照元を呼び出し
-    let imageFileName = ImageFileName()
     
     func loadImage() {
         guard let inputImage = inputImage else { return }
@@ -71,13 +71,12 @@ struct ContentView: View {
                         .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
                         .padding(10)
                         .cornerRadius(20)
-                        .background(Color(#colorLiteral(red: 1, green: 0.7983970642, blue: 0.007040084805, alpha: 1)))
+                        .background(Color(#colorLiteral(red: 1, green: 0.7496010065, blue: 0, alpha: 1)))
                 })
                 Spacer(minLength: 0)
                 Button(action: {
                     if self.isfinished{
-                        print("\(self.$recognizedText)")
-                        UIPasteboard.general.string = "\(self.$recognizedText)"
+                        UIPasteboard.general.string = "\(self.recognizedText)"
                     }else{
                         self.isCopyText = false
                         UIPasteboard.general.string = ""
@@ -104,6 +103,7 @@ struct ContentView: View {
                     .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
                     .fontWeight(.heavy)
             }else{
+                //MARK: - Represent Loading Image
                 Text("🤔")
                     .font(.largeTitle)
             }

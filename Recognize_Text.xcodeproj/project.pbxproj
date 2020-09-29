@@ -15,7 +15,6 @@
 		920C06F324FDFBF600372EFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920C06F124FDFBF600372EFF /* LaunchScreen.storyboard */; };
 		920C06FB24FDFCDC00372EFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 920C06FA24FDFCDC00372EFF /* GoogleService-Info.plist */; };
 		92335CB82500962700ADAA5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92335CB72500962700ADAA5D /* ContentView.swift */; };
-		92BC223625070406001B34F7 /* ImageFileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC223525070406001B34F7 /* ImageFileName.swift */; };
 		92BC22382508A312001B34F7 /* RecognizedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC22372508A312001B34F7 /* RecognizedText.swift */; };
 		92BC223A2508A49B001B34F7 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC22392508A49B001B34F7 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
@@ -32,7 +31,6 @@
 		920C06F424FDFBF600372EFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		920C06FA24FDFCDC00372EFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		92335CB72500962700ADAA5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		92BC223525070406001B34F7 /* ImageFileName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileName.swift; sourceTree = "<group>"; };
 		92BC22372508A312001B34F7 /* RecognizedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizedText.swift; sourceTree = "<group>"; };
 		92BC22392508A49B001B34F7 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		D61461FB16DFC15C62261F83 /* Pods-Recognize_Text.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recognize_Text.debug.xcconfig"; path = "Target Support Files/Pods-Recognize_Text/Pods-Recognize_Text.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,10 +88,8 @@
 			children = (
 				920C06E624FDFBF300372EFF /* AppDelegate.swift */,
 				920C06E824FDFBF300372EFF /* SceneDelegate.swift */,
-				92335CB72500962700ADAA5D /* ContentView.swift */,
-				92BC22392508A49B001B34F7 /* ImagePicker.swift */,
-				92BC223525070406001B34F7 /* ImageFileName.swift */,
-				92BC22372508A312001B34F7 /* RecognizedText.swift */,
+				924F936F2522A7DF00DA396D /* ViewModel */,
+				924F936E2522A74100DA396D /* View */,
 				920C06EC24FDFBF600372EFF /* Assets.xcassets */,
 				920C06F124FDFBF600372EFF /* LaunchScreen.storyboard */,
 				920C06FA24FDFCDC00372EFF /* GoogleService-Info.plist */,
@@ -109,6 +105,23 @@
 				920C06EF24FDFBF600372EFF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		924F936E2522A74100DA396D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				92335CB72500962700ADAA5D /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		924F936F2522A7DF00DA396D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				92BC22372508A312001B34F7 /* RecognizedText.swift */,
+				92BC22392508A49B001B34F7 /* ImagePicker.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +153,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "神村亮佑";
 				TargetAttributes = {
 					920C06E224FDFBF300372EFF = {
@@ -229,7 +242,6 @@
 			files = (
 				920C06E724FDFBF300372EFF /* AppDelegate.swift in Sources */,
 				920C06E924FDFBF300372EFF /* SceneDelegate.swift in Sources */,
-				92BC223625070406001B34F7 /* ImageFileName.swift in Sources */,
 				92BC223A2508A49B001B34F7 /* ImagePicker.swift in Sources */,
 				92BC22382508A312001B34F7 /* RecognizedText.swift in Sources */,
 				92335CB82500962700ADAA5D /* ContentView.swift in Sources */,
@@ -276,6 +288,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -336,6 +349,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

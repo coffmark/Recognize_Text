@@ -16,10 +16,8 @@ struct RecognizedText {
     @Binding var recognizedText : String
     @Binding var isfinished : Bool
     
+    //入力画像を取得
     @Binding var inputImage: UIImage?
-
-    
-    let imageFileName = ImageFileName()
      
     func recognizedTextFunc() -> String{
         //取得したテキストを一時的に入れる
