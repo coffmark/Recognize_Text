@@ -46,7 +46,7 @@ struct ContentView: View {
                             .resizable()
                             .scaledToFit()
                     }else{
-                        Text("Loading Now")
+                        Text("タップしてください")
                             .font(.headline)
                             .foregroundColor(.white)
                         
