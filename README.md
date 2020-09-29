@@ -1,6 +1,7 @@
 # Recognized-Text by FirebaseML
 
-完成形をYoutubeにアップロードしました！
+完成形をYoutubeにアップロードしました！</br>
+
 https://www.youtube.com/watch?v=8JIr2cjixGo&ab_channel=%E7%A5%9E%E6%9D%91%E4%BA%AE%E4%BD%91
 
 
