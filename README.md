@@ -1,5 +1,10 @@
 # Recognized-Text by FirebaseML
 
+完成形をYoutubeにアップロードしました！
+https://www.youtube.com/watch?v=8JIr2cjixGo&ab_channel=%E7%A5%9E%E6%9D%91%E4%BA%AE%E4%BD%91
+
+
+
 <img src="https://user-images.githubusercontent.com/52638834/92302892-f4471780-efaa-11ea-944e-9c77e3c54908.gif" alt="drawing" width="600"/>
 
 
